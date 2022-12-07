@@ -189,6 +189,7 @@ namespace SwitchBoard
                     }
 
                 }
+                Console.WriteLine("extra-line");
                 for (int i = 0; i < fansNeeded; i++)
                 {
                     Fan obj = new Fan();
