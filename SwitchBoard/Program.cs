@@ -12,7 +12,7 @@ namespace SwitchBoard
            
             try
             {
-                const string f = "fan", a = "ac", b = "bulb";
+                const string fan = "fan", ac = "ac", bulb = "bulb";
                 var appliances = new Dictionary<string, bool>();
                 Console.WriteLine("Enter number of Fans");
                 int fansNeeded = (int)Convert.ToInt64((Console.ReadLine()));
@@ -29,51 +29,51 @@ namespace SwitchBoard
                     int i = 0;
                     while (i < fansNeeded && i < acsNeeded && i < bulbsNeeded)
                     {
-                        fanState = appliances[$"{f}{i + 1}"] ? "on" : "off";
-                        acState = appliances[$"{a}{i + 1}"] ? "on" : "off";
-                        bulbState = appliances[$"{b}{i + 1}"] ? "on" : "off";
-                        Console.WriteLine($"{f}{i + 1}" + " ->" + fanState + "\t" + $"{a}{i + 1}" + " ->" + acState + "\t" + $"{b}{i + 1}" + " ->" + bulbState);
+                        fanState = appliances[$"{fan}{i + 1}"] ? "on" : "off";
+                        acState = appliances[$"{ac}{i + 1}"] ? "on" : "off";
+                        bulbState = appliances[$"{bulb}{i + 1}"] ? "on" : "off";
+                        Console.WriteLine($"{fan}{i + 1}" + " ->" + fanState + "\t" + $"{ac}{i + 1}" + " ->" + acState + "\t" + $"{bulb}{i + 1}" + " ->" + bulbState);
                         i++;
                     }
                     while (i < fansNeeded && i < acsNeeded)
                     {
-                        fanState= appliances[$"{f}{i + 1}"] ? "on" : "off";
-                        acState= appliances[$"{a}{i + 1}"] ? "on" : "off";
-                        Console.WriteLine($"{f}{i + 1}" + " ->" + fanState + "\t" + $"{a}{i + 1}" + " ->" + acState);
+                        fanState= appliances[$"{fan}{i + 1}"] ? "on" : "off";
+                        acState= appliances[$"{ac}{i + 1}"] ? "on" : "off";
+                        Console.WriteLine($"{fan}{i + 1}" + " ->" + fanState + "\t" + $"{ac}{i + 1}" + " ->" + acState);
                         i++;
                     }
                     while (i < fansNeeded && i < bulbsNeeded)
                     {
-                        fanState = appliances[$"{f}{i + 1}"] ? "on" : "off";
-                        bulbState = appliances[$"{b}{i + 1}"] ? "on" : "off";
-                        Console.WriteLine($"{f}{i + 1}" + " ->" + fanState + "\t" + "\t" + " " + "\t" + $"{b}{i + 1}" + " ->" + bulbState);
+                        fanState = appliances[$"{fan}{i + 1}"] ? "on" : "off";
+                        bulbState = appliances[$"{bulb}{i + 1}"] ? "on" : "off";
+                        Console.WriteLine($"{fan}{i + 1}" + " ->" + fanState + "\t" + "\t" + " " + "\t" + $"{bulb}{i + 1}" + " ->" + bulbState);
                         i++;
                     }
                     while (i < acsNeeded && i < bulbsNeeded)
                     {
-                        bulbState = appliances[$"{b}{i + 1}"] ? "on" : "off";
-                        acState = appliances[$"{a}{i + 1}"] ? "on" : "off";
-                        Console.WriteLine("\t" + " " + " " + "\t" + $"{a}{i + 1}" + " ->" + acState + "\t" + $"{b}{i + 1}" + " ->" + bulbState);
+                        bulbState = appliances[$"{bulb}{i + 1}"] ? "on" : "off";
+                        acState = appliances[$"{ac}{i + 1}"] ? "on" : "off";
+                        Console.WriteLine("\t" + " " + " " + "\t" + $"{ac}{i + 1}" + " ->" + acState + "\t" + $"{bulb}{i + 1}" + " ->" + bulbState);
                         i++;
                     }
                     while (i < fansNeeded)
                     {
-                        fanState = appliances[$"{f}{i + 1}"] ? "on" : "off";
-                        Console.WriteLine($"{f}{i + 1}" + "->" + fanState);
+                        fanState = appliances[$"{fan}{i + 1}"] ? "on" : "off";
+                        Console.WriteLine($"{fan}{i + 1}" + "->" + fanState);
                         i++;
                     }
                     while (i < acsNeeded)
                     {
                       
-                        acState = appliances[$"{a}{i + 1}"] ? "on" : "off";
-                        Console.WriteLine("\t\t" + $"{a}{i + 1}" + "->" + acState);
+                        acState = appliances[$"{ac}{i + 1}"] ? "on" : "off";
+                        Console.WriteLine("\t\t" + $"{ac}{i + 1}" + "->" + acState);
                         i++;
                     }
                     while (i < bulbsNeeded)
                     {
                         
-                        bulbState = appliances[$"{b}{i + 1}"] ? "on" : "off";
-                        Console.WriteLine("\t" + "\t" + "\t" + "\t" + $"{b}{i + 1}" + " ->" + bulbState);
+                        bulbState = appliances[$"{bulb}{i + 1}"] ? "on" : "off";
+                        Console.WriteLine("\t" + "\t" + "\t" + "\t" + $"{bulb}{i + 1}" + " ->" + bulbState);
                         i++;
                     }
 
@@ -110,17 +110,17 @@ namespace SwitchBoard
                 {
                     for (int i = 0; i < fansNeed; i++)
                     {
-                        string v = $"{f}" + $"{i + 1}";
+                        string v = $"{fan}" + $"{i + 1}";
                         appliances[v] = false;
                     }
                     for (int i = 0; i < acsNeed; i++)
                     {
-                        string v = $"{a}" + $"{i + 1}";
+                        string v = $"{ac}" + $"{i + 1}";
                         appliances[v] = false;
                     }
                     for (int i = 0; i < bulbsNeed; i++)
                     {
-                        string v = $"{b}" + $"{i + 1}";
+                        string v = $"{bulb}" + $"{i + 1}";
                         appliances[v] = false;
                     }
                 }
